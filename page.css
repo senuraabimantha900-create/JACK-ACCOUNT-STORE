@@ -1,0 +1,125 @@
+body { background-color: #050505; color: white; font-family: sans-serif; }
+
+.container { max-width: 800px; margin: 50px auto; padding: 20px; }
+
+.card {
+    background: #0d1117;
+    border: 1px solid #1f2328;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+h3 { color: #2ecc71; margin-bottom: 5px; }
+
+label { display: block; margin: 15px 0 5px; color: #8b949e; font-size: 13px; }
+
+input {
+    width: 100%;
+    padding: 12px;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: white;
+    outline: none;
+}
+
+input:focus { border-color: #2ecc71; }
+
+.update-btn {
+    background: #2ecc71;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.signout-btn {
+    background: transparent;
+    border: 1px solid #e67e22;
+    color: #e67e22;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}body {
+    background-color: #050a0e; /* තද කළු පසුබිම */
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+}
+
+.sidebar {
+    width: 260px;
+    background: #080f14;
+    height: 100vh;
+    border-right: 1px solid #1a2c38;
+    padding: 20px;
+}
+
+.user-card, .security-card {
+    background: #0b141a;
+    border: 1px solid #1a2c38;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+/* කොළ පාට Input සහ Buttons */
+input {
+    background: #142129;
+    border: 1px solid #1a2c38;
+    color: #2ecc71; /* කොළ පාට අකුරු */
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.btn-update {
+    background: #2ecc71;
+    color: black;
+    border: none;
+    padding: 12px 25px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.buy-link {
+    text-decoration: none; /* යටින් ඉරක් වැටීම නවත්වයි */
+    display: block;        /* බටන් එකේ සම්පූර්ණ ප්‍රමාණයටම ලින්ක් එක වැඩ කරයි */
+    width: 100%;
+}
+
+.buy-now-btn {
+    background: #2ecc71;
+    color: black;
+    border: none;
+    padding: 12px 25px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}.custom-buy-btn {
+    display: inline-block;
+    background-color: #2ecc71; /* කොළ පාට */
+    color: #000;              /* කළු පාට අකුරු */
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 8px;       /* බටන් එකේ කොන් රවුම් කිරීමට */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;              /* කාඩ් එකේ පළලටම බටන් එක හැදේ */
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.custom-buy-btn:hover {
+    background-color: #27ae60; /* මවුස් එක උඩට ගිය විට පාට වෙනස් වීම */
+    transform: scale(1.02);
+}

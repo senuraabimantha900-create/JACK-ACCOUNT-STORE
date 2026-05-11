@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JACK ACCOUNT STORE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap');
+        
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #05080a;
+            color: white;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* 1st Page Style */
+        .hero-glow {
+            text-shadow: 0 0 20px #22c55e, 0 0 40px #22c55e;
+            color: #22c55e;
+        }
+
+        .btn-glow {
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        .btn-glow:hover {
+            box-shadow: 0 0 40px rgba(34, 197, 94, 0.9);
+            transform: scale(1.05);
+        }
+
+        /* Page Transitions */
+        .page {
+            display: none;
+            min-height: 100vh;
+        }
+
+        .active {
+            display: block;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Catalog Card Style */
+        .catalog-card ACCOUNT {
+            background: #0d1117;
+            border: 1px solid #1f2937;
+            border-radius: 20px;
+            padding: 20px;
+            transition: border 0.3s;
+        }
+
+        .catalog-card:hover {
+            border-color: #22c55e;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 180px;
+            background: #161b22;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-cover: cover;
+        }
+
+        .add-img-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(34, 197, 94, 0.9);
+            color: black;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .buy-btn {
+            background: #22c55e;
+            color: black;
+            font-weight: bold;
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <section id="page1" class="page active flex flex-col items-center justify-center text-center p-6">
+        <nav class="absolute top-8 w-full max-w-4xl border border-green-500/30 rounded-full bg-black/40 p-3 flex justify-around items-center text-sm">
+            <span class="text-green-500 font-bold">HOME</span>
+            <span>BUY</span>
+            <span>FEATURES</span>
+            <span>PAYMENT</span>
+
+            <a href="https://wa.me/94763273788?text=I%20Want%20To%20Buy%20Sulthan%20Account!!" target="_blank" class="buy-now-btn">BUY NOW</a>
+
+        </nav>
+
+        <div class="mt-20">
+            <span class="bg-green-900/30 text-green-500 px-4 py-1 rounded-full border border-green-500/30 text-xs tracking-widest">SG REGION TRUSTED & VERIFIED ADMIN REAL JACK</span>
+            <h1 class="text-6xl md:text-8xl font-bold mt-6 hero-glow">JACK ACCOUNT STORE</h1>
+            <p class="text-gray-400 mt-4 text-lg max-w-2xl">  Professional Gaming Accounts • Reseller Solutions • Enterprise-Grade Technology</p>
+        </div>
+
+        <div class="mt-12 flex gap-6">
+            <button onclick="changePage('page2')" class="bg-green-500 text-black font-bold py-4 px-10 rounded-full btn-glow flex items-center gap-2">
+                <i class="fas fa-shopping-cart"></i> View All Services
+            </button>
+            <<button onclick="changePage('profilePage')" class="border border-green-500 text-green-500 font-bold py-4 px-10 rounded-full hover:bg-green-500/10">
+    <i class="fas fa-star"></i> Special Accounts
+</button> 
+                
+            </button>
+        </div>
+    </section>
+
+    <section id="page2" class="page p-10">
+        <div class="max-w-6xl mx-auto">
+            <header class="flex justify-between items-center mb-10">
+                <div>
+                    <h2 class="text-3xl font-bold hero-glow">Catalog Store</h2>
+                    <p class="text-gray-500">Pick your professional tools from JACK STORE</p>
+                </div>
+                <button onclick="changePage('page1')" class="text-gray-400 hover:text-white"><i class="fas fa-arrow-left"></i> Back</button>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="SULTHAN ACCOUNT">
+                    <div class="image-container">
+                        <label for="upload1" class="add-img-btn">+ ADD IMAGE</label>
+                        <input type="file" id="upload1" class="hidden" onchange="previewImg(event, 'img1')">
+                        <img id="img1" src="https://via.placeholder.com/400x200/111/22c55e?text=No+Image+Added" alt="Product Image">
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">SULTHAN ACCOUNT</h3>
+                    <p class="text-gray-500 text-sm mb-4">Trusted • Verified Seller</p>
+                    <button class="buy-btn hover:brightness-110">BUY NOW</button>
+                </div>
+
+                <div class="SULTHAN ACCOUNT">
+                    <div class="image-container">
+                        <label for="upload2" class="add-img-btn">+ ADD IMAGE</label>
+                        
+                        <input type="file" id="upload2" class="hidden" onchange="previewImg(event, 'img2')">
+                        <img id="img2" src="https://via.placeholder.com/400x200/111/22c55e?text=No+Image+Added" alt="Product Image">
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">SULTHAN ACCOUNT</h3>
+                    <p class="text-gray-500 text-sm mb-4">Version v2.0.2 • 8.9 MB</p>
+                    <button class="buy-btn hover:brightness-110">BUY NOW</button>
+                </div>
+
+                <div class="SULTHAN ACCOUNTcatalog-card">
+                    <div class="image-container">
+                        <label for="upload3" class="add-img-btn">+ ADD IMAGE</label>
+                        <input type="file" id="upload3" class="hidden" onchange="previewImg(event, 'img3')">
+                        <img id="img3" src="https://via.placeholder.com/400x200/111/22c55e?text=No+Image+Added" alt="Product Image">
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">SULTAN ACCOUNT</h3>
+                    <p class="text-gray-500 text-sm mb-4">Level 75+ • Full Access</p>
+                    <button class="buy-btn hover:brightness-110">BUY NOW</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Page switching function
+        function changePage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        // Image preview function
+        function previewImg(event, imgId) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const output = document.getElementById(imgId);
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+</body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JACK ACCOUNT STORE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap');
+        
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #05080a;
+            color: white;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .hero-glow {
+            text-shadow: 0 0 20px #22c55e, 0 0 40px #22c55e;
+            color: #22c55e;
+        }
+
+        /* පිටු මාරුවීමේදී ලැබෙන Animation එක */
+        .page {
+            display: none;
+            min-height: 100vh;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .active {
+            display: block !important;
+            opacity: 1;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .catalog-card {
+            background: #0d1117;
+            border: 1px solid #1f2937;
+            border-radius: 20px;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .catalog-card:hover { border-color: #22c55e; transform: translateY(-5px); }
+
+        .buy-btn {
+            background: #22c55e;
+            color: black;
+            font-weight: bold;
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.4);
+        }
+    </style>
+</head>
+
+
+    <section id="page1" class="page active flex flex-col items-center justify-center text-center p-6">
+        <h1 class="text-7xl font-bold hero-glow mb-4">JACK ACCOUNT STORE</h1>
+        <p class="text-gray-400 mb-10 tracking-widest uppercase">Professional Gaming Solutions</p>
+        
+        <button onclick="showPage('page2')" class="bg-[#22c55e] text-black font-bold py-4 px-12 rounded-full shadow-[0_0_30px_rgba(34,197,94,0.5)] hover:scale-105 transition-all">
+            <i class="fas fa-shopping-cart mr-2"></i> ACCOUNTS
+        </button>
+    </section>
+
+    <section id="page2" class="page p-10">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-4xl font-bold hero-glow">JACK STORE CATALOG</h2>
+                <button onclick="showPage('page1')" class="text-gray-400 hover:text-white border border-gray-800 px-4 py-2 rounded-lg">
+                    <i class="fas fa-arrow-left mr-2"></i> Back
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="catalog-card">
+                    <div class="h-40 bg-gray-900 rounded-xl mb-4 flex items-center justify-center text-gray-700">
+                        <i class="fas fa-image text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Elite Account</h3>
+                    <p class="text-sm text-gray-500 mb-6">Verified by JACK ACCOUNT STORE</p>
+                    <button class="buy-btn">BUY NOW</button>
+                </div>
+                <div class="catalog-card">
+                    <div class="h-40 bg-gray-900 rounded-xl mb-4 flex items-center justify-center text-gray-700">
+                        <i class="fas fa-image text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Sultan Account</h3>
+                    <p class="text-sm text-gray-500 mb-6">Verified by JACK ACCOUNT STORE</p>
+                    <button class="buy-btn">BUY NOW</button>
+                </div>
+                <div class="catalog-card">
+                    <div class="h-40 bg-gray-900 rounded-xl mb-4 flex items-center justify-center text-gray-700">
+                        <i class="fas fa-image text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Region Top</h3>
+                    <p class="text-sm text-gray-500 mb-6">Verified by JACK ACCOUNT STORE</p>
+                    <button class="buy-btn">BUY NOW</button> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showPage(pageId) {
+            // මුලින්ම හැම පිටුවක්ම හංගනවා
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // දැන් අපිට ඕන කරන පිටුව විතරක් පෙන්වනවා
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            } else {
+                console.error("Page ID not found: " + pageId);
+            }
+        }
+    </script>
+
+</body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JACK ACCOUNT STORE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap');
+        
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #05080a;
+            color: white;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Hero Text Glow Effect */
+        .hero-glow {
+            text-shadow: 0 0 20px rgba(34, 197, 94, 0.8), 0 0 40px rgba(34, 197, 94, 0.4);
+            color: #22c55e;
+        }
+
+        /* Page Transition Styles */
+        .page {
+            display: none;
+            min-height: 100vh;
+            width: 100%;
+            opacity: 0;
+        }
+
+        .active {
+            display: flex !important; /* මැදට ඒම තහවුරු කරයි */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            background: rgba(13, 17, 23, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .catalog-card {
+            background: #0d1117;
+            border: 1px solid #1f2937;
+            border-radius: 20px;
+            padding: 20px;
+            transition: 0.3s;
+        }
+        .catalog-card:hover { border-color: #22c55e; transform: translateY(-5px); }
+    </style>
+</head>
+<body>
+
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="page2" class="page p-10 pt-32">
+        <div class="max-w-6xl mx-auto w-full">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-4xl font-bold hero-glow uppercase">Store Catalog</h2>
+                <button onclick="showPage('page1')" class="bg-gray-800 hover:bg-gray-700 px-6 py-2 rounded-lg transition">
+                    <i class="fas fa-arrow-left mr-2"></i> Back
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="catalog-card">
+                    <div class="h-48 bg-gray-900 rounded-xl mb-4 overflow-hidden">
+                        <img src="https://via.placeholder.com/400x200/000/000" alt="Item" class="w-full h-full object-cover opacity-50">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Elite Gaming Account</h3>
+                    <p class="text-sm text-gray-500 mb-6 font-medium">SG REGION BEST LIVE STREAMER</p>
+                    <button class="w-full bg-[#22c55e] text-black font-bold py-3 rounded-lg hover:brightness-110">BUY NOW</button>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Show selected page
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+                window.scrollTo(0,0);
+            }
+        }
+    </script>
+
+</body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JACK ACCOUNT STORE | Catalog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap');
+        
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #05080a;
+            color: white;
+            margin: 0;
+        }
+
+        .hero-glow {
+            text-shadow: 0 0 15px rgba(34, 197, 94, 0.7);
+            color: #22c55e;
+        }
+
+        /* Catalog Card Style */
+        .catalog-card {
+            background: #0d1117;
+            border: 1px solid #1f2937;
+            border-radius: 24px;
+            padding: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .catalog-card:hover {
+            border-color: #22c55e;
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* High Quality Image Container */
+        .image-box {
+            width: 100%;
+            height: 220px;
+            background: #161b22;
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* පින්තූරය ඇද නොවී ලස්සනට පෙන්වීමට */
+            image-rendering: auto;
+        }
+
+        /* Add Image Overlay */
+        .add-overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(34, 197, 94, 0.9);
+            color: black;
+            padding: 5px 12px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 800;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .buy-btn {
+            background: #22c55e;
+            color: black;
+            font-weight: 800;
+            width: 100%;
+            padding: 14px;
+            border-radius: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .buy-btn:hover {
+            background: #4ade80;
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+        }
+
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <div class="max-w-7xl mx-auto mb-16 flex justify-between items-end">
+        <div>
+            <h1 class="text-4xl md:text-5xl font-bold hero-glow uppercase">JACK ACCOUNT STORE</h1>
+            <p class="text-gray-500 mt-2">Premium Gaming Accounts & Tools Catalog</p>
+        </div>
+        <div class="text-right hidden md:block">
+            <span class="text-xs text-green-500 font-bold tracking-widest bg-green-500/10 px-4 py-2 rounded-full border border-green-500/20">
+                100 000 ACCOUNTS AVAILABLE
+            </span>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        
+        <script>
+            // කාඩ් 10ක් ලේසියෙන් ජෙනරේට් කිරීමට ලූප් එකක් භාවිතා කරමි
+            for(let i=1; i<=10; i++) {
+                document.write(`
+                <div class="catalog-card">
+                    <div class="image-box">
+                        <label for="file-${i}" class="add-overlay"><i class="fas fa-camera mr-1"></i> ADD IMAGE</label>
+                        <input type="file" id="file-${i}" class="hidden" onchange="updatePreview(event, 'preview-${i}')">
+                        <img id="preview-${i}" src="https://via.placeholder.com/600x400/0d1117/22c55e?text=JACK+STORE+ITEM+${i}" alt="HQ Product">
+                    </div>
+                    <div class="mt-5 px-2">
+                        <h3 class="text-xl font-bold text-white mb-1">JACK ITEM #${i}</h3>
+                        <p class="text-sm text-gray-500 mb-6 leading-relaxed">High-quality premium account with full access. Verified by Jack Account Store.</p>
+                        <button class="buy-btn">BUY NOW</button>
+                    </div>
+                </div>
+                `);
+            }
+        </script>
+
+    </div>
+
+    <div class="mt-20 text-center text-gray-700 text-sm italic">
+        © 2026 JACK ACCOUNT STORE - All Rights Reserved
+    </div>
+
+    <script>
+        // පින්තූරය තෝරාගත් පසු එය Card එකේ පෙන්වීමට
+        function updatePreview(event, imgId) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const output = document.getElementById(imgId);
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+
+</body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JACK ACCOUNT STORE | Catalog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap');
+        
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #05080a;
+            color: white;
+            margin: 0;
+        }
+
+        .hero-glow {
+            text-shadow: 0 0 15px rgba(34, 197, 94, 0.7);
+            color: #22c55e;
+        }
+
+        /* Catalog Card Style */
+        .catalog-card {
+            background: #0d1117;
+            border: 1px solid #1f2937;
+            border-radius: 20px;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .catalog-card:hover {
+            border-color: #22c55e;
+            transform: translateY(-5px);
+        }
+
+        /* High Quality Image Box - පින්තූරය ඇදීම වැළැක්වීමට */
+        .image-container {
+            width: 100%;
+            height: 200px; /* Card එකේ උස */
+            background: #161b22;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* පින්තූරය ඇදීම වළක්වා නියම හැඩයට පෙන්වයි */
+            display: block;
+        }
+
+        .add-overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(34, 197, 94, 0.9);
+            color: black;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .buy-btn {
+            background: #22c55e;
+            color: black;
+            font-weight: bold;
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .buy-btn:hover {
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+        }
+    </style>
+</head>
+<body class="p-8">
+
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-3xl font-bold hero-glow mb-10 uppercase tracking-tighter">JACK ACCOUNT STORE CATALOG</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <script>
+                // ලූප් එකකින් Card 12ක් සාදමු
+                for(let i=1; i<=12; i++) {
+                    document.write(`
+                    <div class="catalog-card">
+                        <div class="image-container">
+                            <label for="f-${i}" class="add-overlay">+ ADD IMAGE</label>
+                            
+                            <input type="file" id="f-${i}" class="hidden" onchange="preview(event, 'img-${i}')">
+                            <img id="img-${i}" src="https://via.placeholder.com/400x300/0d1117/22c55e?text=JACK+ITEM+${i}">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="font-bold text-lg">Elite Account #${i}</h3>
+                            <p class="text-xs text-gray-500 mb-4 font-medium uppercase tracking-widest">SG Region Trusted</p>
+                            <a href="https://wa.me/94763273788?text=I want to buy Free Fire Account. #1" target="_blank">
+    <button class="buy-now-btn">BUY NOW</button>
+</a>
+                            
+                        </div>
+                    </div>
+                    `);
+                }
+            </script>
+
+        </div>
+    </div>
+
+    <script>
+        function preview(event, id) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const output = document.getElementById(id);
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+
+</body> <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JACK ACCOUNT STORE | Payments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap');
+        
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #05080a;
+            color: white;
+            margin: 0;
+        }
+
+        .hero-glow {
+            text-shadow: 0 0 15px rgba(34, 197, 94, 0.7);
+            color: #22c55e;
+        }
+
+        .catalog-card {
+            background: #0d1117;
+            border: 1px solid #1f2937;
+            border-radius: 20px;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .catalog-card:hover {
+            border-color: #22c55e;
+            transform: translateY(-5px);
+        }
+
+        /* Image Box - පින්තූරය ඇදීම වැළැක්වීමට (Object-fit Cover) */
+        .image-container {
+            width: 100%;
+            height: 180px;
+            background: #161b22;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .add-overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(34, 197, 94, 0.9);
+            color: black;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Buttons Styling */
+        .buy-btn {
+            background: #22c55e;
+            color: black;
+            font-weight: 800;
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            transition: 0.3s;
+        }
+
+        .payment-btn {
+            background: transparent;
+            color: #22c55e;
+            border: 1px solid #22c55e;
+            font-weight: 700;
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            font-size: 13px;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .payment-btn:hover {
+            background: rgba(34, 197, 94, 0.1);
+        }
+    </style>
+</head>
+<body class="p-8">
+
+    <div class="max-w-7xl mx-auto">
+        <header class="mb-12">
+            <h1 class="text-4xl font-bold hero-glow uppercase tracking-tighter">JACK ACCOUNT STORE</h1>
+            <p class="text-gray-500">Select your item and contact for payments</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <script>
+                const whatsappNo = "94763273788";
+
+                for(let i=1; i<=12; i++) {
+                    document.write(`
+                    <div class="catalog-card">
+                        <div class="image-container">
+                            <label for="f-${i}" class="add-overlay">+ ADD IMAGE</label>
+                            <input type="file" id="f-${i}" class="hidden" onchange="preview(event, 'img-${i}')">
+                            <img id="img-${i}" src="https://via.placeholder.com/400x300/0d1117/22c55e?text=ITEM+${i}">
+                        </div>
+                        <div class="mt-5">
+                            <h3 class="font-bold text-lg mb-4 text-white">Elite Pack #${i}</h3>
+                            
+                            <button class="buy-btn">BUY NOW</button>
+                            
+                            <a href="https://wa.me/${+94763273788}?text=Hello Jack, I want to buy Item #${i}. Please send payment details." target="_blank">
+                                <button class="payment-btn">
+                                    <i class="fab fa-whatsapp text-lg"></i> PAYMENT METHOD
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    `);
+                }
+            </script>
+
+        </div>
+    </div>
+
+    <script>
+        function preview(event, id) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const output = document.getElementById(id);
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+
+</body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JACK ACCOUNT STORE | Direct WhatsApp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap');
+        
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #05080a;
+            color: white;
+            margin: 0;
+        }
+
+        .hero-glow {
+            text-shadow: 0 0 15px rgba(34, 197, 94, 0.7);
+            color: #22c55e;
+        }
+
+        .catalog-card {
+            background: #0d1117;
+            border: 1px solid #1f2937;
+            border-radius: 20px;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .catalog-card:hover {
+            border-color: #22c55e;
+            transform: translateY(-5px);
+        }
+
+        /* පින්තූරය ඇදීම වැළැක්වීමට (HQ View) */
+        .image-container {
+            width: 100%;
+            height: 180px;
+            background: #161b22;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .add-overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(34, 197, 94, 0.9);
+            color: black;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Buy Now Button */
+        .buy-btn {
+            background: #22c55e;
+            color: black;
+            font-weight: 800;
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            transition: 0.3s;
+            display: block;
+            text-align: center;
+        }
+
+        .buy-btn:hover {
+            background: #4ade80;
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+        }
+
+        /* Payment Method Button */
+        .payment-btn {
+            background: transparent;
+            color: #22c55e;
+            border: 1px solid #22c55e;
+            font-weight: 700;
+            width: 100%;
+            padding: 10px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            font-size: 13px;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .payment-btn:hover {
+            background: rgba(34, 197, 94, 0.1);
+        }
+    </style>
+</head>
+<body class="p-8">
+
+    <div class="max-w-7xl mx-auto">
+        <header class="mb-12">
+            <h1 class="text-4xl font-bold hero-glow uppercase tracking-tighter">JACK ACCOUNT STORE</h1>
+            <p class="text-gray-500">Premium Gaming Catalog • WhatsApp Support Enabled</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <script>
+                // ඔයාගේ අලුත් WhatsApp අංකය මෙතන තියෙනවා
+                const whatsappNo = "94763273788";
+
+                for(let i=1; i<=12; i++) {
+                    document.write(`
+                    <div class="catalog-card">
+                        <div class="image-container">
+                            <label for="f-${i}" class="add-overlay">+ ADD IMAGE</label>
+                            <input type="file" id="f-${i}" class="hidden" onchange="preview(event, 'img-${i}')">
+                            <img id="img-${i}" src="https://via.placeholder.com/400x300/0d1117/22c55e?text=ITEM+${i}">
+                        </div>
+                        <div class="mt-5">
+                            <h3 class="font-bold text-lg mb-4 text-white uppercase">JACK ITEM #${i}</h3>
+                            
+                            <a href="https://wa.me/${whatsappNo}?text=Hello Jack, I want to Buy Item #${i} right now!" target="_blank" class="buy-btn">
+                                BUY NOW
+                            </a>
+                            
+                            <a href="https://wa.me/${whatsappNo}?text=Hello Jack, please send me the Payment Methods for Item #${i}." target="_blank">
+                                <button class="payment-btn">
+                                    <i class="fab fa-whatsapp text-lg"></i> PAYMENT METHOD
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    `);
+                }
+            </script>
+
+        </div>
+    </div>
+
+    <script>
+        function preview(event, id) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const output = document.getElementById(id);
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+
+</body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JACK ACCOUNT STORE | Direct WhatsApp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap');
+        
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #05080a;
+            color: white;
+            margin: 0;
+        }
+
+        .hero-glow {
+            text-shadow: 0 0 15px rgba(34, 197, 94, 0.7);
+            color: #22c55e;
+        }
+
+        .catalog-card {
+            background: #0d1117;
+            border: 1px solid #1f2937;
+            border-radius: 20px;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .catalog-card:hover {
+            border-color: #22c55e;
+            transform: translateY(-5px);
+        }
+
+        /* පින්තූරය ඇදීම වැළැක්වීමට (HQ View) */
+        .image-container {
+            width: 100%;
+            height: 180px;
+            background: #161b22;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .add-overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(34, 197, 94, 0.9);
+            color: black;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Buy Now Button */
+        .buy-btn {
+            background: #22c55e;
+            color: black;
+            font-weight: 800;
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            transition: 0.3s;
+            display: block;
+            text-align: center;
+        }
+
+        .buy-btn:hover {
+            background: #4ade80;
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+        }
+
+        /* Payment Method Button */
+        .payment-btn {
+            background: transparent;
+            color: #22c55e;
+            border: 1px solid #22c55e;
+            font-weight: 700;
+            width: 100%;
+            padding: 10px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            font-size: 13px;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .payment-btn:hover {
+            background: rgba(34, 197, 94, 0.1);
+        }
+    </style>
+</head>
+<body class="p-8">
+
+    <div class="max-w-7xl mx-auto">
+        <header class="mb-12">
+            <h1 class="text-4xl font-bold hero-glow uppercase tracking-tighter">JACK ACCOUNT STORE</h1>
+            <p class="text-gray-500">Premium Gaming Catalog • WhatsApp Support Enabled</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <script>
+                // ඔයාගේ අලුත් WhatsApp අංකය මෙතන තියෙනවා
+                const whatsappNo = "94763273788";
+
+                for(let i=1; i<=12; i++) {
+                    document.write(`
+                    <div class="catalog-card">
+                        <div class="image-container">
+                            <label for="f-${i}" class="add-overlay">+ ADD IMAGE</label>
+                            <input type="file" id="f-${i}" class="hidden" onchange="preview(event, 'img-${i}')">
+                            <img id="img-${i}" src="https://via.placeholder.com/400x300/0d1117/22c55e?text=ITEM+${i}">
+                        </div>
+                        <div class="mt-5">
+                            <h3 class="font-bold text-lg mb-4 text-white uppercase">JACK ITEM #${i}</h3>
+                            
+                            <a href="https://wa.me/${whatsappNo}?text=Hello Jack, I want to Buy Item #${i} right now!" target="_blank" class="buy-btn">
+                                BUY NOW
+                            </a>
+                            
+                            <a href="https://wa.me/${whatsappNo}?text=Hello Jack, please send me the Payment Methods for Item #${i}." target="_blank">
+                                <button class="payment-btn">
+                                    <i class="fab fa-whatsapp text-lg"></i> PAYMENT METHOD
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    `);
+                }
+            </script>
+
+        </div>
+    </div>
+
+    <script>
+        function preview(event, id) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const output = document.getElementById(id);
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+
+</body> 
